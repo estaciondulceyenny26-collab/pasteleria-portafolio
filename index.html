@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Esta Ción Dulce Jenny — postres caseros, tortas, alfajores, gelatinas y turrón artesanal." />
-  <title>Esta Ción Dulce Jenny · Catálogo</title>
+  <meta name="description" content="Estación Dulce Yenny — postres caseros, tortas, alfajores, gelatinas y turrón artesanal." />
+  <title>Estación Dulce Yenny · Catálogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -106,6 +106,29 @@
     .card-action:hover span { transform: translateX(4px); }
     .catalog-disclaimer { color: var(--muted); font-size: 11px; line-height: 1.65; margin: 28px 0 0; max-width: 610px; }
 
+    .story-section { background: var(--brand-deep); color: #f6fff9; margin: 0 auto; max-width: 1380px; padding: 100px 8vw; }
+    .story-layout { display: grid; gap: 10vw; grid-template-columns: .8fr 1.2fr; }
+    .story-section .eyebrow { color: var(--brand); }
+    .story-section h2 { color: #f6fff9; }
+    .story-section h2 em { color: var(--brand); }
+    .story-copy { color: #c3ddd0; font-size: 14px; line-height: 1.8; margin: 30px 0 0; max-width: 340px; }
+    .story-quote { border-left: 1px solid rgba(165,229,191,.45); color: #f6fff9; font-family: var(--serif); font-size: clamp(28px, 3.5vw, 48px); line-height: 1.05; margin: 0; padding-left: 32px; }
+    .story-signature { color: var(--brand); font-size: 10px; letter-spacing: .13em; margin: 25px 0 0 32px; text-transform: uppercase; }
+    .gallery-section { margin: 0 auto; max-width: 1380px; padding: 105px 8vw 35px; }
+    .gallery-grid { display: grid; gap: 18px; grid-template-columns: 1.18fr .82fr .82fr; margin-top: 45px; }
+    .gallery-card { background: var(--cream); min-height: 330px; overflow: hidden; position: relative; }
+    .gallery-card:first-child { min-height: 445px; }
+    .gallery-card img { height: 100%; object-fit: cover; width: 100%; }
+    .gallery-caption { background: rgba(31,75,61,.9); bottom: 0; color: #fff; font-size: 10px; left: 0; letter-spacing: .08em; padding: 12px 15px; position: absolute; right: 0; text-transform: uppercase; }
+    .gallery-caption small { color: #b9e8c9; display: block; font-size: 8px; letter-spacing: .06em; margin-top: 5px; text-transform: none; }
+    .image-credit { color: var(--muted); font-size: 10px; line-height: 1.5; margin: 18px 0 0; }
+    .location-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin-top: 48px; }
+    .location-card { background: #fff; border-top: 2px solid var(--brand); min-height: 235px; padding: 24px; }
+    .location-number { color: var(--peach); font-size: 10px; letter-spacing: .12em; }
+    .location-card h3 { color: var(--brand-deep); font-family: var(--serif); font-size: 28px; line-height: 1; margin: 25px 0 12px; }
+    .location-card p { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0; max-width: 260px; }
+    .location-card a { color: var(--brand-deep); display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .08em; margin-top: 22px; text-transform: uppercase; }
+    .card-image { height: 120px; margin: 20px 0 24px; object-fit: cover; width: 100%; }
     .how-section { background: var(--cream); display: grid; gap: 10vw; grid-template-columns: .9fr 1.1fr; margin: 0 auto; max-width: 1380px; padding: 88px 8vw; }
     .how-copy h2 { margin-bottom: 27px; }
     .how-copy p { color: var(--muted); font-size: 14px; line-height: 1.75; max-width: 320px; }
@@ -142,7 +165,11 @@
       .section-heading { align-items: flex-start; flex-direction: column; gap: 28px; }
       .section-intro { margin: 0; }
       .catalog-grid { grid-template-columns: repeat(2, 1fr); }
+      .story-layout { display: flex; flex-direction: column; gap: 52px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-card:first-child { grid-row: span 2; min-height: 500px; }
       .how-section { display: flex; flex-direction: column; gap: 50px; padding: 72px 8vw; }
+      .location-grid { grid-template-columns: 1fr; }
       .contact-main { display: block; padding: 20px 0 70px; }
       .contact-copy { margin-top: 38px; }
       .footer { align-items: flex-start; flex-direction: column; gap: 20px; padding: 25px 8vw 30px; }
@@ -154,6 +181,10 @@
       .hero-actions { align-items: flex-start; flex-direction: column; }
       .section, .how-section, .contact { padding-left: 7vw; padding-right: 7vw; }
       .catalog-grid { display: flex; flex-direction: column; }
+      .gallery-section { padding-left: 7vw; padding-right: 7vw; }
+      .gallery-grid { display: flex; flex-direction: column; }
+      .gallery-card, .gallery-card:first-child { min-height: 280px; }
+      .story-section { padding-left: 7vw; padding-right: 7vw; }
       .catalog-card { min-height: 320px; }
       .catalog-card:nth-child(even) { margin-left: 8vw; }
       .contact-line { align-items: flex-start; flex-direction: column; gap: 9px; }
@@ -164,13 +195,14 @@
   <div class="page">
     <div class="top-note"><strong>Especial de temporada</strong> · Turrón artesanal · 1/2 kilo S/ 17.00 · <a href="#catalogo">Ver producto</a></div>
     <header class="header">
-      <a class="logo" href="#inicio" aria-label="Esta Ción Dulce Jenny, inicio">
-        <img src="soler.png" alt="Logo Esta Ción Dulce Jenny" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="logo-fallback">Esta Ción <em>Dulce Jenny</em></span>
+      <a class="logo" href="#inicio" aria-label="Estación Dulce Yenny, inicio">
+        <img src="soler.png" alt="Logo Estación Dulce Yenny" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="logo-fallback">Estación <em>Dulce Yenny</em></span>
       </a>
       <nav class="nav" aria-label="Navegación principal">
         <a href="#catalogo">Catálogo</a>
-        <a href="#como-pedir">Cómo pedir</a>
+        <a href="#historia">Nuestra historia</a>
+        <a href="#visitanos">Visítanos</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <a class="whatsapp-link" href="https://wa.me/51954525535" target="_blank" rel="noreferrer">WhatsApp <span>↗</span></a>
@@ -187,13 +219,44 @@
             <a class="button button-primary" href="#catalogo">Ver catálogo <span>→</span></a>
             <a class="button button-secondary" href="https://wa.me/51954525535?text=Hola%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noreferrer">Pedir ahora <span>↗</span></a>
           </div>
-          <p class="hero-note">Consulta disponibilidad y detalles de entrega directamente por WhatsApp.</p>
+          <p class="hero-note">Atendemos de 7:00 a. m. a 6:00 p. m. · Pedidos pequeños con 2 días de anticipación.</p>
         </div>
         <div class="hero-card">
-          <img class="hero-logo" src="soler.png" alt="Esta Ción Dulce Jenny" />
+          <img class="hero-logo" src="soler.png" alt="Estación Dulce Yenny" />
           <span class="hero-card-label">Catálogo dulce · 2026</span>
           <span class="hero-card-index">01 / 01</span>
         </div>
+      </section>
+
+      <section class="story-section" id="historia">
+        <div class="story-layout">
+          <div>
+            <p class="eyebrow">Nuestra historia</p>
+            <h2>Volver a lo que<br><em>amamos.</em></h2>
+            <p class="story-copy">Estación Dulce Yenny nació de un reencuentro con lo que siempre nos apasionó. Después de dejar la pastelería por necesidad, decidimos volver y dedicarnos a esto al cien por ciento.</p>
+            <p class="story-copy">Empezamos el año pasado en un pequeño espacio dentro de un mercado, con más sueños que recursos. Hoy seguimos creciendo, preparando cada día postres hechos con dedicación y cariño.</p>
+          </div>
+          <div>
+            <p class="story-quote">“Cada postre, una parada dulce en tu día.”</p>
+            <p class="story-signature">Estación Dulce Yenny · Villa El Salvador</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section" aria-labelledby="galeria-titulo">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Un vistazo dulce</p>
+            <h2 id="galeria-titulo">Para mirar<br><em>y antojarse.</em></h2>
+          </div>
+          <p class="section-intro">Estas son imágenes referenciales mientras preparamos las fotografías propias de Estación Dulce Yenny.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card"><img src="alfajores-referencial.jpg" alt="Alfajores referenciales" /><figcaption class="gallery-caption">Alfajores<small>Imagen referencial · reemplazar por foto propia</small></figcaption></figure>
+          <figure class="gallery-card"><img src="cheesecake-referencial.jpg" alt="Cheesecake referencial" /><figcaption class="gallery-caption">Cheesecake<small>Imagen referencial · reemplazar por foto propia</small></figcaption></figure>
+          <figure class="gallery-card"><img src="turron-referencial.jpg" alt="Turrón de Doña Pepa referencial" /><figcaption class="gallery-caption">Turrón de temporada<small>Imagen referencial · reemplazar por foto propia</small></figcaption></figure>
+        </div>
+        <p class="image-credit">Créditos de imágenes temporales: alfajores, Manuel González Olaechea, <a href="https://commons.wikimedia.org/wiki/File:Alfajores.JPG" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>; cheesecake, Ekabhishek, <a href="https://commons.wikimedia.org/wiki/File:Mango_Cheesecake.jpg" target="_blank" rel="noreferrer">CC BY-SA 2.0</a>; turrón, Dtarazona, <a href="https://commons.wikimedia.org/wiki/File:Turron_de_Do%C3%B1a_Pepa_290809.JPG" target="_blank" rel="noreferrer">CC BY-SA</a>.</p>
       </section>
 
       <section class="section" id="catalogo">
@@ -228,18 +291,33 @@
         </div>
       </section>
 
+      <section class="location-section section" id="visitanos">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Visítanos y recibe</p>
+            <h2>Tu pedido,<br><em>cerca.</em></h2>
+          </div>
+          <p class="section-intro">Estamos en Villa El Salvador, Lima. Coordinamos la entrega según tu zona o puedes recoger directamente en nuestro local.</p>
+        </div>
+        <div class="location-grid">
+          <article class="location-card"><span class="location-number">01</span><h3>Recojo en local</h3><p>Escríbenos para coordinar el horario de recojo de tu pedido.</p><a href="https://wa.me/51954525535?text=Hola%2C%20quiero%20coordinar%20el%20recojo%20de%20mi%20pedido" target="_blank" rel="noreferrer">Coordinar recojo ↗</a></article>
+          <article class="location-card"><span class="location-number">02</span><h3>Delivery cercano</h3><p>Hacemos entregas en Villa El Salvador y distritos cercanos. El costo se confirma según la zona.</p><a href="https://wa.me/51954525535?text=Hola%2C%20quiero%20consultar%20el%20delivery%20a%20mi%20zona" target="_blank" rel="noreferrer">Consultar delivery ↗</a></article>
+          <article class="location-card"><span class="location-number">03</span><h3>Horarios</h3><p>Atendemos de 7:00 a. m. a 6:00 p. m. Los pedidos pequeños requieren al menos 2 días de anticipación.</p><a href="https://wa.me/51954525535?text=Hola%2C%20quiero%20consultar%20disponibilidad" target="_blank" rel="noreferrer">Consultar disponibilidad ↗</a></article>
+        </div>
+      </section>
+
       <section class="contact" id="contacto">
         <div class="contact-main">
           <div><p class="eyebrow">Pedidos y consultas</p><h2>Hagamos algo<br><em>dulce.</em></h2></div>
           <div class="contact-copy"><p>¿Tienes una celebración, un antojo o quieres consultar por un pedido especial? Escríbenos directamente.</p><strong>+51 954 525 535</strong><a class="button" href="https://wa.me/51954525535?text=Hola%2C%20quiero%20consultar%20por%20un%20postre" target="_blank" rel="noreferrer">Abrir WhatsApp ↗</a></div>
         </div>
-        <div class="contact-line"><span>Esta Ción Dulce Jenny</span><span>Postres hechos para compartir</span></div>
+        <div class="contact-line"><span>Estación Dulce Yenny</span><span><a href="https://www.instagram.com/estaciondulceyenny/" target="_blank" rel="noreferrer">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61584760162220" target="_blank" rel="noreferrer">Facebook</a></span></div>
       </section>
     </main>
 
     <footer class="footer">
-      <img src="soler.png" alt="Esta Ción Dulce Jenny" />
-      <p>© <span id="year"></span> Esta Ción Dulce Jenny · Catálogo informativo</p>
+      <img src="soler.png" alt="Estación Dulce Yenny" />
+      <p>© <span id="year"></span> Estación Dulce Yenny · Catálogo informativo</p>
       <a href="#inicio" style="font-size:10px; letter-spacing:.08em; text-transform:uppercase;">Volver arriba ↑</a>
     </footer>
   </div>
@@ -248,19 +326,19 @@
   <script>
     const phone = '51954525535';
     const products = [
-      { id: 'alfajores', category: 'dulces', label: 'Dulces', mark: 'AF', name: 'Alfajores', description: 'Bocados suaves con relleno dulce, ideales para compartir o regalar.', prices: [['1/4 de docena', 'S/ 6.00'], ['1/2 docena', 'S/ 11.00'], ['1 docena', 'S/ 20.00']] },
+      { id: 'alfajores', category: 'dulces', label: 'Dulces', mark: 'AF', image: 'alfajores-referencial.jpg', name: 'Alfajores', description: 'Bocados suaves con relleno dulce, ideales para compartir o regalar.', prices: [['1/4 de docena', 'S/ 6.00'], ['1/2 docena', 'S/ 11.00'], ['1 docena', 'S/ 20.00']] },
       { id: 'crema-volteada', category: 'tortas', label: 'Postres', mark: 'CV', name: 'Crema volteada', description: 'Postre casero, suave y cremoso, con el toque caramelizado de siempre.', prices: [['Tamaño', 'S/ 40.00']] },
       { id: 'tarta-fresa', category: 'tortas', label: 'Tartas', mark: 'TF', name: 'Tarta de fresa', description: 'Base delicada y una cubierta fresca de fresa para una mesa especial.', prices: [['Tarta', 'S/ 50.00']] },
       { id: 'empanadas-boda', category: 'dulces', label: 'Dulces', mark: 'EB', name: 'Empanadas de boda', description: 'Pequeñas, doraditas y perfectas para acompañar una celebración.', prices: [['1/4 de docena', 'S/ 6.00'], ['1/2 docena', 'S/ 11.00'], ['1 docena', 'S/ 20.00']] },
       { id: 'empanadas-carne', category: 'salados', label: 'Salados', mark: 'EC', name: 'Empanadas mixtas o de carne', description: 'Una opción salada para compartir en reuniones, loncheras o celebraciones.', prices: [['1/4 de docena', 'S/ 15.00'], ['1/2 docena', 'S/ 25.00'], ['1 docena', 'S/ 48.00']] },
-      { id: 'cheesecake', category: 'tortas', label: 'Postres', mark: 'CH', name: 'Cheesecake', description: 'Cremoso, delicado y listo para convertirse en el centro de la mesa.', prices: [['Molde pequeño', 'S/ 60.00'], ['Molde grande', 'S/ 80.00']], featured: true },
+      { id: 'cheesecake', category: 'tortas', label: 'Postres', mark: 'CH', image: 'cheesecake-referencial.jpg', name: 'Cheesecake', description: 'Cremoso, delicado y listo para convertirse en el centro de la mesa.', prices: [['Molde pequeño', 'S/ 60.00'], ['Molde grande', 'S/ 80.00']], featured: true },
       { id: 'pay-manzana', category: 'tortas', label: 'Pays', mark: 'PM', name: 'Pay de manzana', description: 'Un clásico de sabor casero, con manzana y masa doradita.', prices: [['Molde pequeño', 'S/ 25.00'], ['Molde mediano', 'S/ 35.00']] },
       { id: 'queques', category: 'dulces', label: 'Queques', mark: 'QU', name: 'Queques', description: 'Vainilla, naranja y marmoleado; también queque de zanahoria con frutos secos.', prices: [['Rectangular · vainilla/naranja/marmoleado', 'S/ 15.00'], ['Molde · zanahoria con frutos secos', 'S/ 20.00']] },
       { id: 'galletas-nida', category: 'dulces', label: 'Galletas', mark: 'GN', name: 'Galletas de Nida', description: 'Galletas caseras para compartir, con presentaciones para cada ocasión.', prices: [['1/4 de docena', 'S/ 7.00'], ['1/2 docena', 'S/ 13.00'], ['1 docena', 'S/ 25.00']] },
       { id: 'muffins', category: 'dulces', label: 'Muffins', mark: 'MU', name: 'Muffins', description: 'Sabores de chocolate y zanahoria, suaves y perfectos para la merienda.', prices: [['Unidad', 'S/ 2.50']] },
       { id: 'gelatina-mosaico', category: 'tortas', label: 'Gelatinas', mark: 'GM', name: 'Gelatina de mosaico', description: 'Colorida, fresca y cremosa; un postre que alegra cualquier mesa.', prices: [['Tamaño mediano', 'S/ 35.00']] },
       { id: 'gelatinas-florales', category: 'tortas', label: 'Gelatinas', mark: 'GF', name: 'Gelatinas florales', description: 'Diseños florales hechos con cuidado, para regalar o celebrar.', prices: [['Vaso chico', 'S/ 5.00'], ['Torta', 'S/ 45.00']] },
-      { id: 'turron', category: 'temporada', label: 'Temporada', mark: 'TU', name: 'Turrón artesanal', description: 'Especial de temporada para compartir durante el mes del Señor de los Milagros.', prices: [['1/2 kilo', 'S/ 17.00']], seasonal: true }
+      { id: 'turron', category: 'temporada', label: 'Temporada', mark: 'TU', image: 'turron-referencial.jpg', name: 'Turrón artesanal', description: 'Especial de temporada para compartir durante el mes del Señor de los Milagros.', prices: [['1/2 kilo', 'S/ 17.00']], seasonal: true }
     ];
 
     const grid = document.getElementById('catalog-grid');
@@ -273,7 +351,7 @@
       grid.innerHTML = visible.map((product, index) => `
         <article class="catalog-card ${product.featured ? 'featured' : ''} ${product.seasonal ? 'is-seasonal' : ''}">
           <div class="card-top"><span class="card-category">${product.label}</span><span class="card-index">${String(index + 1).padStart(2, '0')} / ${String(visible.length).padStart(2, '0')}</span></div>
-          <div class="card-mark" aria-hidden="true">${product.mark}</div>
+          ${product.image ? `<img class="card-image" src="${product.image}" alt="Imagen referencial de ${product.name}" />` : `<div class="card-mark" aria-hidden="true">${product.mark}</div>`}
           <h3 class="card-title">${product.name}</h3>
           <p class="card-description">${product.description}</p>
           <div class="prices">${product.prices.map(price => `<div class="price-row"><span class="price-label">${price[0]}</span><span class="price">${price[1]}</span></div>`).join('')}</div>
@@ -299,3 +377,17 @@
   </script>
 </body>
 </html>
+IMÁGENES DEL CATÁLOGO
+
+Sube estos tres archivos a la misma carpeta donde está index.html en GitHub:
+
+- alfajores-referencial.jpg
+- cheesecake-referencial.jpg
+- turron-referencial.jpg
+
+Son imágenes temporales y llevan la etiqueta “Imagen referencial” dentro del sitio. Reemplázalas por fotos propias cuando las tengas, conservando exactamente los mismos nombres de archivo.
+
+Créditos:
+- Alfajores: Manuel González Olaechea. https://commons.wikimedia.org/wiki/File:Alfajores.JPG — CC BY-SA 3.0.
+- Cheesecake: Ekabhishek. https://commons.wikimedia.org/wiki/File:Mango_Cheesecake.jpg — CC BY-SA 2.0.
+- Turrón: Dtarazona. https://commons.wikimedia.org/wiki/File:Turron_de_Do%C3%B1a_Pepa_290809.JPG — CC BY-SA.
