@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Brisa de Azúcar · Pastelería artesanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --warm-white: #fcfbf7;
+      --deep-mint: #1f4d4a;
+      --mint: #8ccfc4;
+      --cream: #f2eee5;
+      --cocoa: #2b2a26;
+      --peach: #ef9d7a;
+      --serif: "DM Serif Display", Georgia, serif;
+      --sans: "Manrope", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--warm-white);
+      color: var(--cocoa);
+      font-family: var(--sans);
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .site-shell { overflow: hidden; }
+    .site-header {
+      align-items: center;
+      display: flex;
+      gap: 46px;
+      height: 86px;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1440px;
+      padding: 0 5.2vw;
+      position: relative;
+      z-index: 20;
+    }
+    .brand-lockup, .footer-brand { align-items: center; display: inline-flex; gap: 11px; }
+    .brand-mark-wrap {
+      align-items: center;
+      background: var(--mint);
+      border-radius: 50%;
+      display: inline-flex;
+      height: 35px;
+      justify-content: center;
+      width: 35px;
+      font-family: var(--serif);
+      color: var(--deep-mint);
+      font-weight: bold;
+    }
+    .brand-wordmark, .footer-brand span { color: var(--deep-mint); font-family: var(--serif); font-size: 19px; letter-spacing: -0.03em; line-height: 1; white-space: nowrap; }
+    .brand-wordmark em, .footer-brand em { font-style: italic; font-weight: 400; }
+    .desktop-nav { display: flex; gap: 35px; margin-left: auto; }
+    .desktop-nav a, .header-cta { color: #6c706b; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; transition: color 180ms ease; }
+    .desktop-nav a:hover, .header-cta:hover { color: var(--deep-mint); }
+    .header-cta { align-items: center; border-bottom: 1px solid var(--deep-mint); color: var(--deep-mint); display: inline-flex; gap: 10px; padding: 0 0 7px; }
+    
+    .hero-section {
+      display: grid;
+      gap: 5vw;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr);
+      margin: 0 auto;
+      max-width: 1440px;
+      min-height: 670px;
+      padding: 65px 5.2vw 98px;
+    }
+    .hero-copy { align-self: center; padding: 26px 0 0 6vw; }
+    .eyebrow { align-items: center; color: var(--deep-mint); display: flex; font-size: 10px; font-weight: 700; gap: 9px; letter-spacing: 0.16em; margin: 0; text-transform: uppercase; }
+    .eyebrow-dot { background: var(--mint); border-radius: 50%; display: inline-block; height: 7px; width: 7px; }
+    .peach-dot { background: var(--peach); }
+    .hero-copy h1 { color: var(--deep-mint); font-family: var(--serif); font-size: clamp(54px, 6.1vw, 90px); font-weight: 400; letter-spacing: -0.067em; line-height: 0.92; margin: 28px 0 30px; }
+    .hero-copy h1 span, h2 em { color: #38716b; font-style: italic; }
+    .hero-intro { color: #737872; font-size: 16px; line-height: 1.7; margin: 0; max-width: 310px; }
+    .hero-actions { align-items: center; display: flex; gap: 26px; margin-top: 38px; }
+    .primary-button, .light-button { align-items: center; background: var(--deep-mint); color: #ffffff; cursor: pointer; display: inline-flex; font-size: 11px; gap: 25px; letter-spacing: 0.11em; padding: 16px 20px; text-transform: uppercase; border: none; }
+    .hero-visual { align-self: center; min-height: 530px; padding: 0 2.2vw 0 0; position: relative; }
+    .hero-image-frame { background: #e5f2ee; height: min(39vw, 555px); min-height: 430px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+    .hero-image-frame img { width: 100%; height: 100%; object-fit: cover; }
+    
+    .intro-band { background: var(--deep-mint); color: var(--warm-white); display: grid; gap: 40px; grid-template-columns: 0.6fr 2fr 0.65fr; margin: 0 auto; max-width: 1440px; padding: 68px 10vw 71px; }
+    .intro-kicker { color: var(--mint); font-size: 10px; letter-spacing: 0.15em; margin: 8px 0 0; text-transform: uppercase; }
+    .intro-statement { font-family: var(--serif); font-size: clamp(29px, 3.4vw, 49px); letter-spacing: -0.04em; line-height: 1.02; margin: 0; max-width: 730px; }
+    .intro-statement em { color: var(--mint); font-style: italic; }
+    
+    .section-wrap { margin: 0 auto; max-width: 1440px; padding-left: 10vw; padding-right: 10vw; }
+    .collection-section { padding-bottom: 142px; padding-top: 139px; }
+    .section-heading-row { align-items: end; display: flex; justify-content: space-between; }
+    h2 { color: var(--deep-mint); font-family: var(--serif); font-size: clamp(48px, 5.4vw, 78px); font-weight: 400; letter-spacing: -0.067em; line-height: 0.9; margin: 24px 0 0; }
+    .section-note { color: #737872; font-size: 13px; line-height: 1.65; margin: 0 7vw 5px 0; max-width: 235px; }
+    
+    .product-grid { display: grid; gap: 26px; grid-template-columns: 1.14fr 0.86fr 0.86fr; margin-top: 58px; }
+    .product-image-wrap { background: var(--cream); overflow: hidden; position: relative; aspect-ratio: 0.91; }
+    .product-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .product-meta { display: flex; gap: 18px; justify-content: space-between; padding-top: 18px; }
+    .product-category { color: #8a918b; font-size: 9px; letter-spacing: 0.13em; margin: 0 0 8px; text-transform: uppercase; }
+    .product-meta h3 { color: var(--deep-mint); font-family: var(--serif); font-size: 24px; font-weight: 400; margin: 0; }
+    .product-description { color: #777d76; font-size: 11px; line-height: 1.55; margin: 4px 0 0; max-width: 150px; }
+
+    .story-section { display: grid; gap: 14vw; grid-template-columns: 0.92fr 1fr; padding-bottom: 157px; padding-top: 16px; }
+    .story-lead { color: #737872; font-size: 15px; line-height: 1.75; margin: 0; max-width: 345px; }
+    .steps-list { border-left: 1px solid #cfd9d2; margin-top: 31px; padding-left: 39px; position: relative; }
+    .step-item { display: grid; gap: 28px; grid-template-columns: 34px 1fr; padding-bottom: 49px; position: relative; }
+    .step-item h3 { color: var(--deep-mint); font-family: var(--serif); font-size: 28px; font-weight: 400; margin: 0 0 7px; }
+    .step-item p { color: #777d76; font-size: 13px; line-height: 1.6; margin: 0; max-width: 330px; }
+
+    .order-section { background: var(--mint); color: var(--deep-mint); }
+    .order-inner { margin: 0 auto; max-width: 1440px; padding: 28px 10vw 25px; }
+    .order-content { align-items: end; display: grid; gap: 15vw; grid-template-columns: 1.2fr 0.8fr; padding: 91px 0 104px; }
+    .order-content h2 { color: var(--deep-mint); font-size: clamp(54px, 6vw, 86px); margin-top: 25px; }
+    .order-content h2 em { color: #f7f4e9; }
+    .order-copy p { color: #426e69; font-size: 14px; line-height: 1.8; margin: 0 0 29px; max-width: 315px; }
+
+    .site-footer { align-items: center; background: var(--warm-white); display: flex; gap: 35px; justify-content: space-between; margin: 0 auto; max-width: 1440px; padding: 33px 5.2vw 37px; }
+    .footer-brand span { font-size: 17px; }
+
+    @media (max-width: 900px) {
+      .hero-section, .intro-band, .story-section, .order-content, .product-grid { display: flex; flex-direction: column; gap: 30px; padding-left: 6vw; padding-right: 6vw; }
+      .desktop-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand-lockup">
+        <span class="brand-mark-wrap">BA</span>
+        <span class="brand-wordmark">Brisa de <em>Azúcar</em></span>
+      </div>
+      <nav class="desktop-nav">
+        <a href="#coleccion">Colección</a>
+        <a href="#historia">Nuestra forma</a>
+        <a href="#pedidos">Pedidos</a>
+      </nav>
+      <a class="header-cta" href="mailto:hola@brisadeazucar.com?subject=Pedido">Encargar algo dulce</a>
+    </header>
+
+    <main>
+      <section class="hero-section" id="inicio">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Pastelería artesanal · Hecho en pequeñas tandas</div>
+          <h1>Pequeñas tandas.<br><span>Grandes sobremesas.</span></h1>
+          <p class="hero-intro">Postres honestos, horneados con calma y pensados para hacer especial lo cotidiano.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#coleccion">Ver la colección</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <div style="color: #1f4d4a; font-family: var(--serif); font-size: 28px; padding: 20px;">
+              🥧 Pay de Limón Artesanal<br>
+              <span style="font-size: 14px; font-family: var(--sans); opacity: 0.7;">Fresco, cremoso y con merengue tostado</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band">
+        <p class="intro-kicker">01 — Sobre la mesa</p>
+        <p class="intro-statement">Hay recetas que no buscan impresionar. <em>Solo quieren quedarse un ratito más.</em></p>
+      </section>
+
+      <section class="collection-section section-wrap" id="coleccion">
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-dot"></span> La colección</p>
+            <h2>Algo para cada<br><em>antojo.</em></h2>
+          </div>
+          <p class="section-note">Una selección breve de favoritos, disponible por encargo y horneada según temporada.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image-wrap" style="background: #e4f1ec; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px;">
+              <span style="font-family:var(--serif); color:#1f4d4a; font-size:22px;">🍓 Pay de frutos rojos</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Pays</p>
+                <h3>Pay de frutos rojos</h3>
+              </div>
+              <p class="product-description">Masa quebrada, crema de vainilla y fruta fresca.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap" style="background: #f6e7de; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px;">
+              <span style="font-family:var(--serif); color:#1f4d4a; font-size:22px;">🍋 Torta limón & pistacho</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Tortas</p>
+                <h3>Torta limón & pistacho</h3>
+              </div>
+              <p class="product-description">Capas ligeras, ralladura cítrica y pistachos.</p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap" style="background: #f0eee3; display:flex; align-items:center; justify-content:center; text-align:center; padding:20px;">
+              <span style="font-family:var(--serif); color:#1f4d4a; font-size:22px;">🥟 Empanaditas de guayaba</span>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">De bocado</p>
+                <h3>Empanaditas de guayaba</h3>
+              </div>
+              <p class="product-description">Dobladas a mano y rellenas de guayaba con queso.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="story-section section-wrap" id="historia">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-dot peach-dot"></span> Nuestra forma</p>
+          <h2>Lo bueno<br>toma su <em>tiempo.</em></h2>
+          <p class="story-lead">Trabajamos en pequeñas tandas para cuidar lo que no se puede apurar.</p>
+        </div>
+        <div class="steps-list">
+          <div class="step-item">
+            <span style="color: #ef9d7a; font-weight:700;">01</span>
+            <div><h3>Elegimos</h3><p>Fruta de estación y mantequilla real.</p></div>
+          </div>
+          <div class="step-item">
+            <span style="color: #ef9d7a; font-weight:700;">02</span>
+            <div><h3>Horneamos</h3><p>Cada pedido entra al horno en su momento.</p></div>
+          </div>
+          <div class="step-item">
+            <span style="color: #ef9d7a; font-weight:700;">03</span>
+            <div><h3>Compartimos</h3><p>Lo entregamos fresco para tu mesa.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="order-section" id="pedidos">
+        <div class="order-inner">
+          <div class="order-content">
+            <div>
+              <p class="eyebrow" style="color: #1f4d4a;"><span class="eyebrow-dot"></span> Pedidos</p>
+              <h2>La próxima<br><em>sobremesa</em><br>empieza aquí.</h2>
+            </div>
+            <div class="order-copy">
+              <p>Cuéntanos qué quieres celebrar y cuándo te gustaría recibirlo. Te respondemos con opciones a tu medida.</p>
+              <a class="light-button" href="mailto:hola@brisadeazucar.com?subject=Pedido" style="display:inline-block; background:#fcfbf7; color:#1f4d4a; padding:15px 25px; text-transform:uppercase; font-size:11px; letter-spacing:0.1em; font-weight:bold;">Escribirnos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><span>Brisa de <em>Azúcar</em></span></div>
+      <p style="color: #8a918b; font-size: 11px;">Pastelería para quedarte un ratito más.</p>
+      <div><a href="mailto:hola@brisadeazucar.com" style="font-size:11px; color:#1f4d4a;">Contacto</a></div>
+    </footer>
+  </div>
+</body>
+</html>
